@@ -1,0 +1,10 @@
+{
+  "model_name": "v10 spatial adhesion vehicle capability utilization model",
+  "scenario": "normal",
+  "gamma_slide": 0.5,
+  "gamma_brake": 0.5,
+  "water_decay_m": 90.0,
+  "cg_height_ratio": 0.45,
+  "max_grade_angle_deg": 30.0,
+  "notes": "这些是默认情景参数，不是实测车辆或实测地表真值。"
+}

@@ -1,0 +1,21 @@
+alpha_d: 15.0
+alpha_m: 5.0
+alpha_r: 15.0
+alpha_u: 15.0
+cell_size: 30.0
+dem: D:\VSCode Program\通行能力分析_研\yajiang_gesigou_srtmgl1_30m_1000px_bbox.tif
+edge_buffer: 10
+goal: None
+max_pixels: 1000
+min_distance_ratio: 0.35
+multi_neighbors: 8
+n_pairs: 3
+neighbors: [4, 8, 16, 32]
+out: outputs_direction_sensitivity
+reverse_neighbors: 8
+seed: 42
+skip_multistart: False
+skip_neighborhood: False
+skip_reverse: False
+start: None
+synthetic: False

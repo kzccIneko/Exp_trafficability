@@ -1,0 +1,2 @@
+﻿scenario,gamma_slide,gamma_brake,water_decay_m,landcover_source,water_source,soil_source,formula
+"""normal""",0.5,0.5,90.0,"""synthetic_landcover_from_dem_twi""","""landcover_or_high_twi_proxy""","""none_zero""","""mu = clip(mu_base * (1 - gamma * W_eff), min, max)"""

@@ -1,0 +1,11 @@
+﻿指标,含义
+risk_weighted_distance_J,风险加权距离；路径上单位距离代价乘边长后的总和。当前阶段它不是时间或能耗，而是相对通行阻碍总代价。
+mean_unit_cost_weighted,按边长加权的平均单位距离阻碍。路径长度差异大时，比总代价更适合比较路径穿越地形的平均困难程度。
+uphill/downhill/flat_edge_count,沿路径被判定为上坡、下坡、近似平坡的边数量；阈值默认为绝对纵坡角 1°。
+uphill/downhill/flat_length_ratio,上坡、下坡、近似平坡在路径总长度中的比例，比边数量更稳定。
+mean_uphill_angle_deg,仅统计上坡边的平均纵坡角，用于判断路径是否倾向于避开持续上坡。
+mean_downhill_angle_abs_deg,仅统计下坡边的平均下坡绝对角度，用于判断路径是否穿越陡下坡风险区。
+mean_cross_angle_deg / q90_cross_angle_deg / max_cross_angle_deg,沿路径横坡角均值、90%分位数和最大值；用于评价侧倾/侧滑风险暴露。
+cross_exposure_ratio_gt_Xdeg,横坡角超过 X° 的路径长度占比；这是横坡消融实验的核心指标。
+downhill_exposure_ratio_gt_Xdeg,下坡角绝对值超过 X° 的路径长度占比；用于评价陡下坡制动和失稳风险。
+total_turn_angle_deg,路径累计转向角，反映路径曲折程度；不能单独代表好坏，但可与风险暴露共同解释绕行代价。

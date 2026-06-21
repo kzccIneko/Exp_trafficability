@@ -1,0 +1,23 @@
+alpha_d: 15.0
+alpha_m: 5.0
+alpha_r: 15.0
+alpha_r_values: [8.0, 10.0, 12.0, 15.0, 20.0]
+alpha_u: 15.0
+cell_size: 30.0
+dem: None
+dem_config: None
+edge_buffer: 10
+main_neighbors: 8
+max_pixels: 1000
+neighbors: [4, 8, 16]
+out: outputs_v6_synthetic_test
+random_pairs_per_roi: 1
+roi_min_slope: 2.0
+roi_stride: 60
+roi_top_k: 2
+roi_window: 100
+seed: 42
+sensitivity_pairs: 3
+skip_path_plots: False
+synthetic: True
+synthetic_size: 180

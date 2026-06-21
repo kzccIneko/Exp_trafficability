@@ -1,0 +1,23 @@
+alpha_d: 15.0
+alpha_m: 5.0
+alpha_r: 15.0
+alpha_r_values: [8.0, 10.0, 12.0, 15.0, 20.0]
+alpha_u: 15.0
+cell_size: 30.0
+dem: D:\VSCode Program\通行能力分析_研\yajiang_gesigou_srtmgl1_30m_1000px_bbox.tif
+dem_config: my_dem_path.txt
+edge_buffer: 10
+main_neighbors: 8
+max_pixels: 1000
+neighbors: [4, 8, 16]
+out: outputs_v6_real_full
+random_pairs_per_roi: 1
+roi_min_slope: 2.0
+roi_stride: 120
+roi_top_k: 3
+roi_window: 240
+seed: 42
+sensitivity_pairs: 4
+skip_path_plots: False
+synthetic: False
+synthetic_size: 220

@@ -1,0 +1,11 @@
+﻿公式,人话解释,来源类型,是否进入主模型
+alpha_parallel = arctan(grad_z · u_d),车辆前进方向遇到的坡度；正值为上坡，负值为下坡。,DEM 几何投影,是
+alpha_cross = arctan(|grad_z · n_d|),车辆横向方向遇到的横坡，反映车身左右倾斜程度。,DEM 几何投影,是
+"rho_up = tan(max(alpha_parallel,0))/tan(alpha_grade)",当前上坡用了多少比例的可接受爬坡能力。,斜坡需求 / 车辆爬坡能力场景参数,是
+"rho_down = tan(max(-alpha_parallel,0))/mu_b(x,y)",当前下坡用了多少比例的制动附着能力。,斜面附着条件 + 空间化制动附着参数,是
+rho_roll = tan(|alpha_cross|)/(B/(2h_c)),当前横坡用了多少比例的抗侧翻稳定能力。,车辆静态稳定因子 SSF,是
+"rho_slide = tan(|alpha_cross|)/mu_s(x,y)",当前横坡用了多少比例的横向附着能力。,斜面附着条件 + 空间化侧滑附着参数,是
+"rho_max = max(rho_up,rho_down,rho_roll,rho_slide)",每个方向上最接近限制的那一项。,多限制同时满足的最大利用率表达,是
+"c(i,d)=1+rho_max(i,d)",基础距离成本加上车辆能力利用率附加成本。,本文路径代价构造，需要实验验证,是
+TWI=ln(A_s/(tan(beta)+eps)),DEM 派生地形湿润倾向，不是实测土壤含水率。,地形湿润指数,用于 mu 空间化
+"mu = clip(mu_base*(1-gamma*W), min, max)",地表类别给出基础附着能力，湿润倾向降低附着能力。,GIS 地表附着参数转换模型，默认参数需敏感性分析,是

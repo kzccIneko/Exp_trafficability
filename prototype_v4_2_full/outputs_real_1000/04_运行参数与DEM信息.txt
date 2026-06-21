@@ -1,0 +1,30 @@
+运行参数
+========
+alpha_d: 15.0
+alpha_m: 5.0
+alpha_r: 15.0
+alpha_u: 15.0
+cell_size: 30.0
+dem: D:\VSCode Program\通行能力分析_研\yajiang_gesigou_srtmgl1_30m_1000px_bbox.tif
+directions: 8
+edge_buffer: 5
+goal: None
+max_pixels: 1000
+no_path: False
+out: outputs_real_1000
+start: None
+synthetic: False
+
+DEM 元数据
+========
+数据源: D:\VSCode Program\通行能力分析_研\yajiang_gesigou_srtmgl1_30m_1000px_bbox.tif
+读取方式: rasterio，已读取 GeoTIFF 空间元数据
+坐标系: EPSG:4326
+空间范围: (100.84597222225943, 29.876249999996013, 101.12375000003725, 30.154027777773827)
+原始行列数: (1000, 1000)
+x方向分辨率_m: 26.730346276453417
+y方向分辨率_m: 30.870255555559645
+平均栅格大小_m: 28.80030091600653
+降采样步长: 1
+实际使用行列数: (1000, 1000)
+实际栅格大小_m: 28.80030091600653

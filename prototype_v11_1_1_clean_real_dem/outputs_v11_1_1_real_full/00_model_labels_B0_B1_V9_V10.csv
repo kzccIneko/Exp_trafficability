@@ -1,0 +1,6 @@
+﻿模型方案,短名,中文名称,方法含义,论文作用,规划代价形式
+B0_Static_Slope,B0,B0 静态坡度代价模型,仅使用坡度大小构建静态标量代价，不区分车辆行驶方向。,传统 GIS 坡度成本面基线，用于证明静态标量通行能力图的方向盲区。,c_B0(i)=1-ln(1-R_slope(i))
+B1_Longitudinal_Directional,B1,B1 方向纵坡代价模型,只考虑车辆前进方向的上坡/下坡纵坡，不考虑横坡。,验证方向性是否必要，并暴露只看纵坡会诱导横切坡面的问题。,"c_B1(i,d)=1-ln(1-R_parallel(i,d))"
+V9_Constant_Adhesion,V9,V9 常数附着车辆能力利用率模型,考虑上坡牵引、下坡制动、侧翻稳定性、侧滑附着，但 mu_s、mu_b 为空间常数。,车辆能力利用率基线，用于区分车辆约束机制与空间化附着机制。,"c_V9(i,d)=1+rho_max(i,d), mu_s/mu_b=constant"
+V10_Free,V10-Free,V10 空间附着车辆能力利用率模型（软约束）,在 V9 基础上将 mu_s、mu_b 空间化，但 rho_max 超限时仍允许通行并提高代价。,主模型软约束版本，用于表达最小风险压力路径。,"c_V10(i,d)=1+rho_max(i,d), mu_s/mu_b=field(x,y)"
+V10_Hard_rho_lim,V10-Hard,V10 硬约束可达性模型,"若 rho_max(i,d)>rho_lim，则该方向边直接视为不可通行。",回答是否存在满足车辆能力阈值的可行路径，用于可达性与战术阈值分析。,c=1+rho_max if rho_max<=rho_lim else +inf

@@ -1,0 +1,6 @@
+numpy
+scipy
+matplotlib
+tifffile
+# rasterio 是可选但推荐。Windows/Python 3.14 若安装失败，可先用 tifffile fallback 跑实验。
+rasterio

@@ -1,0 +1,5 @@
+numpy
+scipy
+matplotlib
+tifffile
+# rasterio 可选。若需要读取 GeoTIFF 坐标系和仿射变换，可单独安装 rasterio。

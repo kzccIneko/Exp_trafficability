@@ -1,0 +1,16 @@
+﻿参数,中文含义,数值,单位,来源类型,说明
+mass_kg,整备质量,1959.5190384,m/kg/degree or dimensionless,公开车辆参数,公开车辆规格；用于示例车辆建模。
+wheelbase_m,轴距,3.00736,m/kg/degree or dimensionless,公开车辆参数,公开车辆规格；用于示例车辆建模。
+track_width_m,轮距,1.5976599999999999,m/kg/degree or dimensionless,公开车辆参数,公开车辆规格；用于示例车辆建模。
+vehicle_height_m,车高,1.8694399999999998,m/kg/degree or dimensionless,公开车辆参数,公开车辆规格；用于示例车辆建模。
+ground_clearance_m,运行离地间隙,0.27432,m/kg/degree or dimensionless,公开车辆参数,公开车辆规格；用于示例车辆建模。
+approach_angle_deg,接近角,43.9,m/kg/degree or dimensionless,公开车辆参数,公开车辆规格；用于示例车辆建模。
+departure_angle_deg,离去角,37.0,m/kg/degree or dimensionless,公开车辆参数,公开车辆规格；用于示例车辆建模。
+breakover_angle_deg,通过角,22.6,m/kg/degree or dimensionless,公开车辆参数,公开车辆规格；用于示例车辆建模。
+cg_height_ratio,质心高度占车高比例 h_c/H,0.45,m/kg/degree or dimensionless,场景/敏感性参数,实验场景/敏感性参数；不作为 Jeep 官方值。
+max_grade_angle_deg,最大可接受爬坡角场景,30.0,m/kg/degree or dimensionless,场景/敏感性参数,实验场景/敏感性参数；不作为 Jeep 官方值。
+mu_slide,侧滑附着系数场景,0.5,m/kg/degree or dimensionless,场景/敏感性参数,实验场景/敏感性参数；不作为 Jeep 官方值。
+mu_brake,下坡制动附着系数场景,0.5,m/kg/degree or dimensionless,场景/敏感性参数,实验场景/敏感性参数；不作为 Jeep 官方值。
+cg_height_m,质心高度 h_c,0.8412479999999999,m,由车高与 h_c/H 计算,因为公开资料未给质心高度，所以由敏感性参数 h_c/H 计算。
+SSF,静态稳定因子 B/(2h_c),0.9495772946859904,dimensionless,模型计算值,用于侧翻稳定性利用率。
+static_roll_limit_deg,简化静态侧翻参考角 atan(B/(2h_c)),43.518466385102606,degree,模型计算值,用于解释侧翻稳定性边界，不表示实车动态安全极限。

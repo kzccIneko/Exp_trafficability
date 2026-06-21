@@ -1,0 +1,15 @@
+{
+  "name": "Jeep Wrangler Rubicon 4-door (public-spec example)",
+  "mass_kg": 1959.5190384,
+  "wheelbase_m": 3.00736,
+  "track_width_m": 1.5976599999999999,
+  "vehicle_height_m": 1.8694399999999998,
+  "ground_clearance_m": 0.27432,
+  "approach_angle_deg": 43.9,
+  "departure_angle_deg": 37.0,
+  "breakover_angle_deg": 22.6,
+  "cg_height_ratio": 0.45,
+  "max_grade_angle_deg": 30.0,
+  "mu_slide": 0.5,
+  "mu_brake": 0.5
+}

@@ -1,0 +1,4 @@
+﻿pair_id,roi_id,scenario,start_row,start_col,goal_row,goal_col,direction_hint_deg,note
+1,1,contour_cross_slope,24,119,155,60,114.0785731954898,沿等高线方向布设起终点，用于检验只看纵坡是否会低估横坡风险。
+2,1,upslope_downslope,60,24,119,155,24.078573195489795,沿平均坡向布设起终点，用于检验上坡/下坡代价非对称。
+3,1,diagonal_ne_sw,39,39,140,140,45.0,固定对角跨越，用于观察综合绕行。

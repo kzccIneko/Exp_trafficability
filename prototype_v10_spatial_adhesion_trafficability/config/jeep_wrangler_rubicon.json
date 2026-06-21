@@ -1,0 +1,12 @@
+{
+  "name": "Jeep Wrangler Rubicon 4-door public-spec example",
+  "wheelbase_m": 3.00736,
+  "track_width_m": 1.59766,
+  "vehicle_height_m": 1.86944,
+  "ground_clearance_m": 0.27432,
+  "mass_kg": 1959.518,
+  "approach_angle_deg": 43.9,
+  "departure_angle_deg": 37.0,
+  "breakover_angle_deg": 22.6,
+  "note": "公开车辆规格用于示例；质心高度、附着能力、最大可接受爬坡角作为敏感性参数。"
+}

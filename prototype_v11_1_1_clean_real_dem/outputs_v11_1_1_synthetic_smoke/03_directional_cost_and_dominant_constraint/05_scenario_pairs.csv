@@ -1,0 +1,2 @@
+﻿pair_id,roi_id,scenario,start_row,start_col,goal_row,goal_col,direction_hint_deg,note
+1,1,contour_cross_slope,30,130,149,49,124.53580568846644,沿等高线方向布设起终点，用于检验只看纵坡是否会低估横坡约束压力。

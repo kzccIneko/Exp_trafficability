@@ -1,0 +1,24 @@
+﻿参数,中文含义,数值,单位,来源类型,来源或处理说明
+mass_kg,整备质量,1959.5190384,SI or degree,公开车辆参数,Stellantis Fleet 2026 Wrangler Buyer Guide / Jeep official capability page; package docs include URLs.
+wheelbase_m,轴距,3.00736,SI or degree,公开车辆参数,Stellantis Fleet 2026 Wrangler Buyer Guide / Jeep official capability page; package docs include URLs.
+track_width_m,轮距,1.5976599999999999,SI or degree,公开车辆参数,Stellantis Fleet 2026 Wrangler Buyer Guide / Jeep official capability page; package docs include URLs.
+ground_clearance_m,运行离地间隙,0.27432,SI or degree,公开车辆参数,Stellantis Fleet 2026 Wrangler Buyer Guide / Jeep official capability page; package docs include URLs.
+approach_angle_deg,接近角,43.9,SI or degree,公开车辆参数,Stellantis Fleet 2026 Wrangler Buyer Guide / Jeep official capability page; package docs include URLs.
+departure_angle_deg,离去角,37.0,SI or degree,公开车辆参数,Stellantis Fleet 2026 Wrangler Buyer Guide / Jeep official capability page; package docs include URLs.
+breakover_angle_deg,通过角,22.6,SI or degree,公开车辆参数,Stellantis Fleet 2026 Wrangler Buyer Guide / Jeep official capability page; package docs include URLs.
+cg_height_m,质心高度,0.85,SI or degree,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+max_grade_angle_deg,最大可接受爬坡角/牵引能力代理,30.0,SI or degree,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+rolling_resistance,滚动阻力系数,0.04,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+mu_slide,横向等效附着系数,0.5,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+mu_brake,下坡制动等效附着系数,0.5,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+eta_roll,横坡侧翻安全折减系数,0.6,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+eta_slide,侧滑安全折减系数,0.8,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+eta_break,几何通过安全折减系数,0.7,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+softplus_k,软屏障函数陡峭系数,8.0,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+lambda_up,上坡约束权重,1.0,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+lambda_down,下坡约束权重,1.0,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+lambda_roll,侧翻约束权重,1.2,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+lambda_slide,侧滑约束权重,1.0,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+lambda_break,几何通过约束权重,0.35,dimensionless,假设/敏感性参数,Model assumption / sensitivity parameter; not claimed as an official Jeep value.
+SSF,静态稳定因子 B/(2h_c),0.9398,dimensionless,由公开轮距与假设质心高度计算,用于横坡侧翻能力利用率；质心高度需敏感性分析。
+safe_roll_limit_deg,安全折减后的横坡参考角 atan(eta_roll*B/(2h_c)),29.417781782460555,degree,模型计算值,不是车辆官方极限，仅用于解释 eta_roll 折减后的模型边界。
