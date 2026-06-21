@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>越野通行能力建模报告深度审查与创新点1实验设计</title>
+<style>
+:root{
+  --bg:#f7f9fc;--paper:#ffffff;--ink:#172033;--muted:#596579;--pri:#153e75;--pri2:#2b6cb0;--acc:#c53030;--ok:#2f855a;--warn:#b7791f;--bd:#d9e2ec;--code:#101828;
+  --shadow:0 10px 28px rgba(16,24,40,.08);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;line-height:1.82;font-size:16px}.wrap{max-width:1080px;margin:0 auto;padding:34px 28px 90px}.cover{background:linear-gradient(135deg,#153e75 0%,#2b6cb0 70%,#63b3ed 100%);color:#fff;border-radius:22px;padding:38px 42px;box-shadow:var(--shadow);margin-bottom:24px}.cover h1{margin:0 0 14px;font-size:2.15rem;line-height:1.28;letter-spacing:.02em}.cover p{margin:8px 0;color:#edf6ff}.meta{display:grid;grid-template-columns:150px 1fr;gap:0;margin-top:24px;border:1px solid rgba(255,255,255,.36);border-radius:14px;overflow:hidden}.meta div{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.22)}.meta div:nth-child(odd){font-weight:700;background:rgba(255,255,255,.12)}.meta div:nth-last-child(-n+2){border-bottom:none}.card{background:var(--paper);border:1px solid var(--bd);border-radius:18px;padding:26px 30px;margin:22px 0;box-shadow:var(--shadow)}.toc{background:#fff;border:1px solid var(--bd);border-radius:18px;padding:24px 28px;margin:24px 0;box-shadow:var(--shadow)}.toc h2{margin-top:0;border:0;padding:0}.toc ul{margin:8px 0 0 18px}.toc li{margin:5px 0}.toc a{text-decoration:none;color:var(--pri)}.toc a:hover{text-decoration:underline}h2{font-size:1.65rem;color:var(--pri);border-bottom:3px solid var(--pri);padding-bottom:8px;margin:44px 0 18px}h3{font-size:1.28rem;color:var(--pri2);border-left:5px solid var(--pri2);padding-left:12px;margin:32px 0 14px}h4{font-size:1.08rem;margin:24px 0 10px;color:#243b53}p{margin:10px 0;text-align:justify}strong{color:var(--pri)}ul,ol{margin:10px 0 10px 24px}li{margin:4px 0}.note{border-left:5px solid var(--pri2);background:#ebf8ff;padding:14px 18px;border-radius:0 12px 12px 0;margin:16px 0}.warn{border-left:5px solid var(--warn);background:#fffaf0;padding:14px 18px;border-radius:0 12px 12px 0;margin:16px 0}.bad{border-left:5px solid var(--acc);background:#fff5f5;padding:14px 18px;border-radius:0 12px 12px 0;margin:16px 0}.ok{border-left:5px solid var(--ok);background:#f0fff4;padding:14px 18px;border-radius:0 12px 12px 0;margin:16px 0}.qa{background:#f8fafc;border:1px solid var(--bd);border-radius:14px;padding:16px 18px;margin:14px 0}.qa .q{font-weight:700;color:var(--pri);margin-bottom:6px}.qa .a{color:var(--ink)}table{width:100%;border-collapse:collapse;background:#fff;margin:16px 0;border-radius:12px;overflow:hidden;border:1px solid var(--bd)}th{background:var(--pri);color:white;padding:11px 13px;text-align:left;font-weight:700;font-size:.92rem}td{padding:10px 13px;border-top:1px solid var(--bd);vertical-align:top}tr:nth-child(even) td{background:#f8fafc}code{font-family:"JetBrains Mono","Consolas",monospace;background:#edf2f7;color:#9b2c2c;border-radius:5px;padding:1px 5px;font-size:.9em}pre{background:var(--code);color:#e4e7ec;border-radius:14px;padding:18px 20px;overflow:auto;font-size:.88rem;line-height:1.62}pre code{background:transparent;color:inherit;padding:0}.formula{background:#f8fafc;border:1px dashed #9fb3c8;border-radius:14px;padding:14px 16px;margin:14px 0;overflow:auto}.tag{display:inline-block;font-size:.78rem;padding:2px 8px;border-radius:999px;background:#e6f0ff;color:#153e75;border:1px solid #b3d4ff;margin-right:4px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.small{font-size:.92rem;color:var(--muted)}.checklist li{list-style:"□  ";padding-left:4px}.footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--bd);font-size:.9rem;color:var(--muted)}@media(max-width:780px){.wrap{padding:18px 14px 60px}.cover{padding:28px 22px}.cover h1{font-size:1.55rem}.meta{grid-template-columns:1fr}.meta div:nth-child(odd){border-bottom:0}.grid2{grid-template-columns:1fr}h2{font-size:1.38rem}h3{font-size:1.16rem}table{font-size:.9rem}}
+@media print{body{background:#fff}.wrap{max-width:none;padding:0}.card,.toc,.cover{box-shadow:none}.cover{border-radius:0}h2{page-break-before:auto}}
+</style>
+<script>
+window.MathJax = {tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]]},svg:{fontCache:"global"}};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script src="/inject.js"></script></head>
+<body>
+<div class="wrap">
+  <section class="cover">
+    <h1>越野通行能力建模报告深度审查与创新点1实验设计</h1>
+    <p>面向博士论文与 SCI 二区及以上论文的研究主线重构、方法自我批判、算法推导和第一阶段实验方案。</p>
+    <div class="meta">
+      <div>研究对象</div><div>基于 DEM、土地覆盖、土壤属性、水系与 OSM 山路数据的越野通行能力建模</div>
+      <div>当前阶段</div><div>从已有综述报告重构为可实现的算法与实验闭环</div>
+      <div>优先实现</div><div>创新点1：方向相关地形阻碍度模型，即从静态坡度标量图转向 $C(x,y,\theta)$ 方向代价场</div>
+      <div>生成日期</div><div>2026-05-31</div>
+    </div>
+  </section>
+
+  <nav class="toc">
+    <h2>目录</h2>
+    <ul>
+      <li><a href="#sec1">1. 审查结论总览</a></li>
+      <li><a href="#sec2">2. 对原报告的保留、修正与重构</a></li>
+      <li><a href="#sec3">3. 最终博士论文研究主线</a></li>
+      <li><a href="#sec4">4. 创新点1：方向相关地形阻碍度模型</a></li>
+      <li><a href="#sec5">5. 创新点1算法推导：逐步自问自答</a></li>
+      <li><a href="#sec6">6. 创新点1实验设计</a></li>
+      <li><a href="#sec7">7. 参数选择、敏感性与自我批判</a></li>
+      <li><a href="#sec8">8. 后续代码实现蓝图</a></li>
+      <li><a href="#sec9">9. 组会汇报与论文写作建议</a></li>
+    </ul>
+  </nav>
+
+  <section id="sec1" class="card">
+    <h2>1. 审查结论总览</h2>
+    <p>你已有的研究报告不是“方向错误”，而是<strong>过于庞大、主线尚未压缩</strong>。报告已经包含文献综述、单要素量化、多因子综合、路径规划、方向敏感模型和 OSM 验证等内容，但若直接作为博士研究方案，会出现三个风险：</p>
+    <ol>
+      <li><strong>综述过大：</strong>车辆地面力学、NRMM、路径规划、机器学习等内容都写了，但你的实验条件主要是 GIS/遥感数据和一台电脑，不能把车辆动力学作为主模型。</li>
+      <li><strong>公式逻辑未完全统一：</strong>部分公式把“影响强度”“阻碍度”“代价”混在一起，例如水系影响若写成 $C_w=\exp(-\mu d_w)$ 并直接乘入总代价，会导致远离水系时代价趋近 0，逻辑不稳。</li>
+      <li><strong>验证还不够可证伪：</strong>原报告设计了 CR、RP、DC、FLC 等指标，但部分阈值显得经验化。更适合采用相对比较、统计检验、消融实验和 OSM 弱监督验证。</li>
+    </ol>
+    <div class="ok">
+      <strong>最终判断：</strong>博士论文应收束为“基于公开地理信息数据的方向异质性通行阻碍度建模”。路径规划不是主问题，而是用来验证代价图能否支持合理越野路线选择。
+    </div>
+  </section>
+
+  <section id="sec2" class="card">
+    <h2>2. 对原报告的保留、修正与重构</h2>
+    <h3>2.1 应保留的内容</h3>
+    <table>
+      <thead><tr><th>原报告内容</th><th>保留理由</th><th>在新方案中的位置</th></tr></thead>
+      <tbody>
+        <tr><td>第6章“方向敏感的越野通行能力建模”</td><td>这是最接近导师创新要求的部分，能把坡度方向、行驶方向、等高线方向统一到一个模型中。</td><td>博士论文核心方法章；SCI 论文1核心。</td></tr>
+        <tr><td>OSM 山路验证</td><td>你的条件下缺少实车实验，OSM 是现实路径选择的可获得弱监督数据。</td><td>实验验证章；但需要弱化“真值”表述。</td></tr>
+        <tr><td>多因子通行阻碍度思想</td><td>符合你的原始研究目标：从 DEM、土地覆盖、土壤、水系到综合通行能力。</td><td>创新点2或后续完整模型。</td></tr>
+        <tr><td>路径规划应用</td><td>可展示代价图的工程应用价值。</td><td>只作为验证和展示，不作为论文主创新。</td></tr>
+      </tbody>
+    </table>
+
+    <h3>2.2 必须修正的内容</h3>
+    <table>
+      <thead><tr><th>问题</th><th>为什么有问题</th><th>修改方式</th></tr></thead>
+      <tbody>
+        <tr><td>把坡度影响写成单一有效坡度 $s_{eff}=s\cos(\theta-\phi)$</td><td>它只表达纵向坡度，忽略横坡侧倾风险。沿等高线时纵坡接近 0，但横坡可能很大。</td><td>分解为纵坡 $g_{\parallel}$ 与横坡 $g_{\perp}$。</td></tr>
+        <tr><td>“沿等高线方向最优”表述过绝对</td><td>沿等高线可降低爬坡阻力，但可能增加横滚和侧滑风险。</td><td>改成“当横坡风险可接受时，等高线方向可能具有较低纵向阻碍”。</td></tr>
+        <tr><td>山脊/山谷线无条件降低代价</td><td>山谷可能有水系、湿地，山脊可能狭窄、破碎或陡峭。</td><td>将其改为创新点2的“有条件结构先验”，创新点1暂不纳入。</td></tr>
+        <tr><td>多因子直接相乘代价</td><td>不同因子的物理含义可能不同，直接乘代价易出现量纲和边界问题。</td><td>统一为阻碍度 $R\in[0,1]$，先算通过能力 $P$，再转代价。</td></tr>
+        <tr><td>OSM 验证阈值固定</td><td>CR&lt;0.7、RP&lt;30% 等阈值缺少普适依据。</td><td>采用 baseline 对比、AUC、方向一致性、消融实验和置信区间。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="sec3" class="card">
+    <h2>3. 最终博士论文研究主线</h2>
+    <div class="note">
+      <strong>一句话主线：</strong>建立从地理信息数据到单要素通行阻碍度、再到方向相关综合通行能力图的量化模型；路径规划仅作为代价图合理性的应用验证。
+    </div>
+    <pre><code>公开地理信息数据
+DEM、土地覆盖、土壤属性、水系、OSM道路
+        ↓
+单要素通行阻碍度建模
+坡度方向阻碍度、横坡阻碍度、粗糙度、土地覆盖、土壤、水系
+        ↓
+方向相关地形阻碍度模型
+C(x,y,θ)，同一栅格不同方向通行代价不同
+        ↓
+多因子非补偿综合模型
+硬约束 + 通过能力乘法 + 因子交互
+        ↓
+OSM弱监督验证
+道路/非道路区分、方向一致性、路径重合度、消融实验
+        ↓
+路径规划应用展示
+A*/Dijkstra 只用于验证代价图能否支持合理路线选择</code></pre>
+
+    <h3>建议拆分为三篇论文</h3>
+    <table>
+      <thead><tr><th>论文</th><th>核心问题</th><th>核心创新</th><th>实验重点</th></tr></thead>
+      <tbody>
+        <tr><td>论文1</td><td>坡度为什么不能只做静态标量图？</td><td>方向相关纵坡/横坡阻碍度模型。</td><td>OSM 山路方向一致性与道路/非道路代价区分。</td></tr>
+        <tr><td>论文2</td><td>地形结构线是否能作为低代价通道先验？</td><td>曲率、TPI、山脊/山谷/等高线方向的条件修正。</td><td>结构线重合率、消融实验。</td></tr>
+        <tr><td>论文3</td><td>多要素如何综合而不被强障碍抵消？</td><td>硬约束 + 非补偿通过能力 + OSM 弱监督校准。</td><td>多因子综合、路径规划验证、敏感性分析。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="sec4" class="card">
+    <h2>4. 创新点1：方向相关地形阻碍度模型</h2>
+    <h3>4.1 核心问题</h3>
+    <p>传统坡度通行能力模型通常把一个栅格赋予一个坡度代价值：</p>
+    <div class="formula">$$R_s(x,y)=f(\beta(x,y))$$</div>
+    <p>这隐含了一个假设：同一位置无论从哪个方向通过，坡度阻碍都相同。这个假设在山地越野场景中不成立。车辆沿最大坡降方向上坡、沿最大坡降方向下坡、沿等高线横切坡面，会遇到完全不同的牵引、制动和稳定性风险。</p>
+
+    <h3>4.2 创新表达</h3>
+    <p>将静态坡度阻碍度从 $R_s(x,y)$ 扩展为方向相关阻碍度：</p>
+    <div class="formula">$$R_s(x,y,\theta)$$</div>
+    <p>其中 $\theta$ 表示车辆从当前栅格向相邻栅格移动的方向。这样，同一个栅格可以有 8 个或 16 个方向代价。</p>
+
+    <h3>4.3 第一阶段边界</h3>
+    <div class="warn">
+      第一阶段只做创新点1，即 DEM 方向坡度模型。暂时不加入土地覆盖、土壤、水系、山脊山谷结构线。这样可以让实验目标清晰：证明“方向建模”本身是否比传统坡度标量模型更合理。
+    </div>
+  </section>
+
+  <section id="sec5" class="card">
+    <h2>5. 创新点1算法推导：逐步自问自答</h2>
+
+    <h3>5.1 输入数据与预处理</h3>
+    <div class="qa"><div class="q">问：为什么第一阶段只使用 DEM？</div><div class="a">因为创新点1要证明的是“坡度影响具有方向性”。如果一开始加入土地覆盖、土壤、水系，会导致模型改进来源不清楚。只用 DEM 可以把变量控制在地形几何本身。</div></div>
+    <div class="qa"><div class="q">问：DEM 为什么必须投影到米制坐标系？</div><div class="a">坡度和梯度计算需要水平距离单位。如果 DEM 仍是经纬度坐标，像元宽高不是米，梯度 $\partial z/\partial x$ 和 $\partial z/\partial y$ 会失真。</div></div>
+    <div class="qa"><div class="q">问：是否需要平滑 DEM？</div><div class="a">需要设置为可选步骤。坡度和横坡来自一阶导数，对噪声敏感。轻微平滑能降低随机噪声，但过度平滑会抹掉微地形。建议做“无平滑、3×3中值/高斯、5×5高斯”的敏感性对比。</div></div>
+
+    <h3>5.2 DEM 梯度</h3>
+    <p>设 DEM 为 $z(x,y)$，在投影坐标下计算一阶梯度：</p>
+    <div class="formula">$$\nabla z(x,y)=(p,q)=\left(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y}\right)$$</div>
+    <p>坡度大小为：</p>
+    <div class="formula">$$\beta(x,y)=\arctan\sqrt{p^2+q^2}$$</div>
+    <div class="qa"><div class="q">问：为什么不直接用 $\beta$？</div><div class="a">$\beta$ 只有坡度大小，没有说明车辆沿哪个方向走。车辆上坡、下坡、横坡的风险不同，所以必须把坡度向量投影到行驶方向和横向方向。</div></div>
+
+    <h3>5.3 方向向量</h3>
+    <p>给定行驶方向 $\theta$，定义行驶方向单位向量：</p>
+    <div class="formula">$$\mathbf{u}_\theta=(\cos\theta,\sin\theta)$$</div>
+    <p>横向单位向量：</p>
+    <div class="formula">$$\mathbf{n}_\theta=(-\sin\theta,\cos\theta)$$</div>
+    <div class="qa"><div class="q">问：为什么要定义横向向量？</div><div class="a">因为车辆不仅受前进方向坡度影响，还受左右方向坡度影响。横坡过大时，即使纵坡为 0，也可能出现侧滑、横滚或侧翻风险。</div></div>
+
+    <h3>5.4 纵坡与横坡分解</h3>
+    <p>将 DEM 梯度投影到车辆行驶方向，得到纵向坡度：</p>
+    <div class="formula">$$g_{\parallel}(x,y,\theta)=\nabla z\cdot\mathbf{u}_\theta=p\cos\theta+q\sin\theta$$</div>
+    <p>投影到车辆横向方向，得到横向坡度：</p>
+    <div class="formula">$$g_{\perp}(x,y,\theta)=\nabla z\cdot\mathbf{n}_\theta=-p\sin\theta+q\cos\theta$$</div>
+    <p>转换为角度形式：</p>
+    <div class="formula">$$\alpha_{\parallel}=\arctan(g_{\parallel}),\qquad \alpha_{\perp}=\arctan|g_{\perp}|$$</div>
+    <div class="qa"><div class="q">问：为什么 $g_{\parallel}$ 保留正负号，而 $g_{\perp}$ 取绝对值？</div><div class="a">纵坡正负表示上坡或下坡，两者物理意义不同；横坡的左右方向对风险基本对称，左倾和右倾都可能增加稳定性风险，所以取绝对值。</div></div>
+
+    <h3>5.5 纵坡阻碍度函数</h3>
+    <p>定义纵坡阻碍度 $R_{\parallel}\in[0,1]$：</p>
+    <div class="formula">$$
+R_{\parallel}=\begin{cases}
+1-\exp\left[-\left(\frac{\alpha_{\parallel}}{\alpha_u}\right)^2\right], & \alpha_{\parallel}>0 \\
+0, & -\alpha_m\le \alpha_{\parallel}\le 0 \\
+1-\exp\left[-\left(\frac{|\alpha_{\parallel}|-\alpha_m}{\alpha_d}\right)^2\right], & \alpha_{\parallel}< -\alpha_m
+\end{cases}
+$$</div>
+    <div class="qa"><div class="q">问：为什么上坡和下坡不对称？</div><div class="a">上坡主要体现牵引与动力需求，坡度越大阻碍越强；轻微下坡不一定增加阻碍，甚至可能降低能耗；但陡下坡会增加制动、打滑和失稳风险。因此下坡需要设置一个“缓下坡容许区间” $\alpha_m$。</div></div>
+    <div class="qa"><div class="q">问：为什么用指数饱和函数，而不是线性函数？</div><div class="a">阻碍度需要限制在 $[0,1]$，并且坡度影响通常不是线性增长。指数饱和函数在小坡度下增长较慢，在大坡度下快速趋近 1，符合“越接近极端越危险”的逻辑。</div></div>
+
+    <h3>5.6 横坡阻碍度函数</h3>
+    <div class="formula">$$R_{\perp}=1-\exp\left[-\left(\frac{\alpha_{\perp}}{\alpha_r}\right)^2\right]$$</div>
+    <div class="qa"><div class="q">问：为什么横坡必须单独建模？</div><div class="a">只用纵坡会错误地认为沿等高线方向总是低代价。但沿等高线时纵坡接近 0，横坡可能接近地形实际坡度。横坡越大，车辆侧向稳定风险越高，所以必须单独惩罚。</div></div>
+
+    <h3>5.7 纵坡与横坡综合</h3>
+    <p>将两个阻碍源合成为方向坡度阻碍度：</p>
+    <div class="formula">$$R_{slope}(x,y,\theta)=1-(1-R_{\parallel})(1-R_{\perp})$$</div>
+    <div class="qa"><div class="q">问：为什么不是 $R_{\parallel}+R_{\perp}$？</div><div class="a">直接相加可能超过 1，还会引入重新归一化问题。$1-(1-R_{\parallel})(1-R_{\perp})$ 表示两个风险源的非补偿合成：只要一个风险很高，综合阻碍度就会很高。</div></div>
+
+    <h3>5.8 从阻碍度转为边代价</h3>
+    <p>路径或局部通行评价使用边代价：</p>
+    <div class="formula">$$C_{edge}(x,y,\theta)=l_\theta\cdot[-\ln(1-R_{slope}(x,y,\theta)+\varepsilon)]$$</div>
+    <p>其中 $l_\theta$ 是方向距离：正交方向为像元大小，斜向为 $\sqrt{2}$ 倍像元大小。</p>
+    <div class="qa"><div class="q">问：为什么用 $-\ln(1-R)$？</div><div class="a">$1-R$ 可以理解为相对通过能力。取负对数后，低阻碍区域代价接近 0，高阻碍区域代价快速增大，并且便于沿路径累加。</div></div>
+  </section>
+
+  <section id="sec6" class="card">
+    <h2>6. 创新点1实验设计</h2>
+    <h3>6.1 实验目的</h3>
+    <p>第一阶段实验只回答一个问题：</p>
+    <div class="note"><strong>方向相关坡度模型是否比传统坡度标量模型更能解释现实山路的局部方向选择？</strong></div>
+
+    <h3>6.2 实验数据</h3>
+    <table>
+      <thead><tr><th>数据</th><th>用途</th><th>要求</th></tr></thead>
+      <tbody>
+        <tr><td>DEM</td><td>计算坡度、纵坡、横坡和方向代价。</td><td>投影到米制坐标；分辨率建议 10–30 m；处理 NoData。</td></tr>
+        <tr><td>OSM 山路/林道</td><td>弱监督验证方向一致性与道路低代价性。</td><td>筛选 track、path、unclassified、service、tertiary 等，排除高速和城市道路。</td></tr>
+        <tr><td>研究区边界</td><td>裁剪 DEM 与道路。</td><td>优先选择山区或丘陵区，避免平原区方向差异不明显。</td></tr>
+      </tbody>
+    </table>
+
+    <h3>6.3 对比模型</h3>
+    <table>
+      <thead><tr><th>模型</th><th>公式/思想</th><th>验证目的</th></tr></thead>
+      <tbody>
+        <tr><td>B0：传统坡度标量模型</td><td>$R=f(\beta)$</td><td>作为最基础 baseline。</td></tr>
+        <tr><td>B1：仅纵坡方向模型</td><td>$R=R_{\parallel}$</td><td>检验只考虑行驶方向坡度是否足够。</td></tr>
+        <tr><td>Ours：纵坡 + 横坡模型</td><td>$R=1-(1-R_{\parallel})(1-R_{\perp})$</td><td>检验加入横坡后是否更合理。</td></tr>
+      </tbody>
+    </table>
+
+    <h3>6.4 OSM 道路样本构建</h3>
+    <ol>
+      <li>从 OSM 中提取可能反映山地通行的道路，如 <code>track</code>、<code>path</code>、<code>unclassified</code>、<code>service</code>、<code>tertiary</code>。</li>
+      <li>排除 <code>motorway</code>、<code>trunk</code>、<code>primary</code> 等强工程道路，因为它们受桥梁、隧道、工程开挖影响较大。</li>
+      <li>按 DEM 像元大小对道路线重采样，得到等间距道路点。</li>
+      <li>计算每个道路点的局部道路方向 $\theta_{road}$。</li>
+      <li>剔除低坡度区域样本，例如 $\beta&lt;3^\circ$ 的道路点，因为平坦区方向差异不明显，无法检验方向模型。</li>
+    </ol>
+    <div class="qa"><div class="q">问：为什么要剔除平坦区？</div><div class="a">在平坦区，不同方向代价几乎相同，方向模型和标量模型难以区分。创新点1的验证应集中在方向差异明显的丘陵或山区。</div></div>
+
+    <h3>6.5 负样本构建</h3>
+    <p>不要简单随机取非道路点。建议使用<strong>匹配负样本</strong>：</p>
+    <ol>
+      <li>对每个道路点，在一定半径内随机采样非道路点。</li>
+      <li>负样本与道路点尽量处于相近海拔带、相近坡度带。</li>
+      <li>负样本距离 OSM 道路至少大于 2–3 个像元，避免采到道路旁边。</li>
+      <li>验证时使用道路点方向 $\theta_{road}$ 或局部匹配方向计算负样本代价。</li>
+    </ol>
+    <div class="qa"><div class="q">问：为什么不用完全随机负样本？</div><div class="a">完全随机点可能落在平原、水边或其他明显不同区域，模型很容易区分，但不能说明方向坡度模型有效。匹配负样本更难、更公平。</div></div>
+
+    <h3>6.6 验证指标</h3>
+    <h4>指标1：方向一致性 DC</h4>
+    <div class="formula">$$DC=\frac{1}{N}\sum_{i=1}^N |\cos(\theta_{road,i}-\theta_i^*)|$$</div>
+    <div class="formula">$$\theta_i^*=\arg\min_{\theta\in\Theta} C_{edge}(x_i,y_i,\theta)$$</div>
+    <p>解释：真实道路方向是否接近模型预测的最低代价方向。由于道路通常可双向通行，使用绝对余弦值消除正反方向差异。</p>
+
+    <h4>指标2：道路/非道路代价区分 AUC</h4>
+    <div class="formula">$$AUC=P(C_{road}&lt;C_{nonroad})$$</div>
+    <p>解释：若模型合理，OSM 山路上的方向代价应统计上低于匹配非道路点。</p>
+
+    <h4>指标3：配对代价差</h4>
+    <div class="formula">$$\Delta C_i=C_{nonroad,i}-C_{road,i}$$</div>
+    <p>解释：使用配对样本检验 $\Delta C$ 是否显著大于 0。建议报告均值、中位数、95% 置信区间和 Wilcoxon 符号秩检验结果。</p>
+
+    <h4>指标4：方向各向异性指数</h4>
+    <div class="formula">$$AI(x,y)=\frac{C_{max}(x,y)-C_{min}(x,y)}{C_{max}(x,y)+C_{min}(x,y)+\varepsilon}$$</div>
+    <p>解释：衡量同一栅格不同方向代价差异。山区应有更高 AI，平坦区 AI 接近 0。</p>
+
+    <h3>6.7 实验输出图件</h3>
+    <table>
+      <thead><tr><th>输出</th><th>意义</th></tr></thead>
+      <tbody>
+        <tr><td>坡度标量图</td><td>展示传统方法输入。</td></tr>
+        <tr><td>8方向/16方向代价栅格</td><td>展示同一位置不同方向代价。</td></tr>
+        <tr><td>最小方向代价图 $C_{min}$</td><td>展示每个栅格最容易通过的方向代价。</td></tr>
+        <tr><td>最优方向图 $\theta^*$</td><td>展示模型认为的低代价通行方向。</td></tr>
+        <tr><td>各向异性指数图 AI</td><td>展示方向差异显著区域。</td></tr>
+        <tr><td>代价玫瑰图</td><td>选取典型栅格，展示方向代价分布。</td></tr>
+        <tr><td>OSM 道路叠加图</td><td>直观看道路方向是否与低代价方向一致。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="sec7" class="card">
+    <h2>7. 参数选择、敏感性与自我批判</h2>
+    <h3>7.1 第一版默认参数</h3>
+    <table>
+      <thead><tr><th>参数</th><th>建议初值</th><th>含义</th><th>为什么这样选</th></tr></thead>
+      <tbody>
+        <tr><td>$\Theta$</td><td>8方向</td><td>方向集合</td><td>与栅格邻接图一致，便于后续 A*/Dijkstra；第一版复杂度低。</td></tr>
+        <tr><td>$\alpha_u$</td><td>15° 或研究区坡度 P75</td><td>上坡阻碍尺度</td><td>不是车辆极限，只是阻碍增长尺度；后续做敏感性分析。</td></tr>
+        <tr><td>$\alpha_m$</td><td>3°–5°</td><td>缓下坡容许区间</td><td>轻微下坡不应被强惩罚；防止下坡一律高代价。</td></tr>
+        <tr><td>$\alpha_d$</td><td>15°–20°</td><td>陡下坡风险尺度</td><td>下坡过陡才明显增加制动和失稳风险。</td></tr>
+        <tr><td>$\alpha_r$</td><td>8°–12° 或横坡 P65</td><td>横坡风险尺度</td><td>横坡对稳定性更敏感，尺度应小于或接近上坡尺度。</td></tr>
+        <tr><td>$\varepsilon$</td><td>$10^{-6}$</td><td>数值稳定项</td><td>防止 $\ln(0)$。</td></tr>
+      </tbody>
+    </table>
+
+    <h3>7.2 参数选择原则</h3>
+    <ol>
+      <li><strong>不要把参数说成精确车辆性能参数。</strong> 你没有车辆实测数据，参数只能表示相对阻碍度尺度。</li>
+      <li><strong>优先使用数据自适应参数。</strong> 例如用研究区坡度分位数确定 $\alpha_u$ 与 $\alpha_r$。</li>
+      <li><strong>必须做敏感性分析。</strong> 将 $\alpha_u,\alpha_r,\alpha_m$ 分别上下浮动 20%–30%，观察 DC、AUC、$\Delta C$ 是否稳定。</li>
+      <li><strong>后续可用 OSM 进行弱监督校准。</strong> 但第一版先固定参数，避免训练与验证混在一起。</li>
+    </ol>
+
+    <h3>7.3 自我批判清单</h3>
+    <ul class="checklist">
+      <li>是否把 OSM 道路当成绝对真值？不能。只能说是现实通行路径的弱监督参考。</li>
+      <li>是否声称模型能预测真实车速？不能。当前模型输出的是相对通行阻碍度和相对通行代价。</li>
+      <li>是否过度相信 DEM 分辨率？不能。30m DEM 可能无法表达小冲沟、石块和林下障碍。</li>
+      <li>是否把沿等高线方向说成一定最优？不能。必须同时考虑横坡。</li>
+      <li>是否让路径规划喧宾夺主？不能。路径规划只验证代价图。</li>
+      <li>是否在创新点1混入山脊山谷线？暂时不要。结构线应放到创新点2。</li>
+    </ul>
+  </section>
+
+  <section id="sec8" class="card">
+    <h2>8. 后续代码实现蓝图</h2>
+    <h3>8.1 推荐 Python 项目结构</h3>
+    <pre><code>trafficability_exp1/
+  data/
+    dem.tif
+    osm_roads.gpkg
+    boundary.gpkg
+  outputs/
+    rasters/
+    figures/
+    tables/
+  src/
+    config.py
+    io_utils.py
+    terrain_derivatives.py
+    directional_model.py
+    osm_sampling.py
+    validation_metrics.py
+    visualization.py
+  run_exp1.py
+  README.md</code></pre>
+
+    <h3>8.2 核心函数设计</h3>
+    <table>
+      <thead><tr><th>函数</th><th>输入</th><th>输出</th><th>作用</th></tr></thead>
+      <tbody>
+        <tr><td><code>load_dem()</code></td><td>DEM 路径</td><td>数组、仿射变换、CRS、nodata</td><td>读取 DEM 并检查坐标单位。</td></tr>
+        <tr><td><code>compute_gradient()</code></td><td>DEM、像元大小</td><td>$p,q,\beta$</td><td>计算地形梯度。</td></tr>
+        <tr><td><code>direction_vectors()</code></td><td>方向数量 8/16</td><td>$\theta,\mathbf{u},\mathbf{n}$</td><td>生成方向集合。</td></tr>
+        <tr><td><code>compute_long_cross_slope()</code></td><td>$p,q,\theta$</td><td>$\alpha_{\parallel},\alpha_{\perp}$</td><td>计算纵坡与横坡。</td></tr>
+        <tr><td><code>slope_impedance()</code></td><td>$\alpha_{\parallel},\alpha_{\perp}$、参数</td><td>$R_{slope}$</td><td>计算方向坡度阻碍度。</td></tr>
+        <tr><td><code>edge_cost()</code></td><td>$R_{slope}$、方向长度</td><td>$C_{edge}$</td><td>转成路径可累加边代价。</td></tr>
+        <tr><td><code>sample_osm_roads()</code></td><td>OSM 道路、DEM 网格</td><td>道路样本点、方向</td><td>构建验证正样本。</td></tr>
+        <tr><td><code>build_matched_nonroad()</code></td><td>道路样本、掩膜</td><td>负样本点</td><td>构建公平对照。</td></tr>
+        <tr><td><code>direction_consistency()</code></td><td>$\theta_{road},\theta^*$</td><td>DC</td><td>验证方向预测能力。</td></tr>
+      </tbody>
+    </table>
+
+    <h3>8.3 伪代码</h3>
+    <pre><code>读取 DEM，并投影/检查到米制 CRS
+处理 NoData，必要时轻微平滑
+计算梯度 p, q
+生成 8 个方向 theta
+for theta in directions:
+    计算纵坡 alpha_parallel
+    计算横坡 alpha_perp
+    计算 R_parallel
+    计算 R_perp
+    R_slope = 1 - (1 - R_parallel) * (1 - R_perp)
+    C_edge = direction_length * (-log(1 - R_slope + eps))
+输出每个方向的 C_edge
+计算 C_min、theta_star、AI
+读取 OSM 山路并筛选
+采样道路点和方向 theta_road
+构建匹配非道路样本
+计算 DC、AUC、配对代价差
+绘制坡度图、C_min、theta_star、AI、OSM叠加图、玫瑰图</code></pre>
+
+    <h3>8.4 第一轮实现后需要检查的结果</h3>
+    <ul>
+      <li>平坦区 AI 是否接近 0。</li>
+      <li>山坡区 $\theta^*$ 是否大致沿等高线或缓坡方向，而不是随机噪声。</li>
+      <li>OSM 山路方向与 $\theta^*$ 是否有统计一致性。</li>
+      <li>加入横坡后，模型是否避免把陡横坡等高线方向错误判为极低代价。</li>
+      <li>B0、B1、Ours 是否能形成清晰对比。</li>
+    </ul>
+  </section>
+
+  <section id="sec9" class="card">
+    <h2>9. 组会汇报与论文写作建议</h2>
+    <h3>9.1 下一次组会建议标题</h3>
+    <div class="note"><strong>从坡度标量图到方向代价场：基于 DEM 梯度分解的越野通行阻碍度建模</strong></div>
+
+    <h3>9.2 组会讲述顺序</h3>
+    <ol>
+      <li>说明传统坡度模型的问题：同一栅格一个坡度值，无法区分上坡、下坡、横坡。</li>
+      <li>引出导师问题：等高线方向、山脊山谷线、行驶方向是否影响通行能力。</li>
+      <li>先只解决“行驶方向”问题：把坡度分解为纵坡和横坡。</li>
+      <li>展示公式推导和每一步为什么这样设计。</li>
+      <li>展示实验数据、输出图件和 OSM 验证指标。</li>
+      <li>说明后续再加入曲率、TPI、山脊山谷线，形成创新点2。</li>
+    </ol>
+
+    <h3>9.3 论文中可以这样写创新点1</h3>
+    <blockquote>
+      针对传统越野通行能力评价中坡度因子通常被表达为静态标量、无法反映行驶方向差异的问题，本文提出一种方向相关的地形阻碍度模型。该模型基于 DEM 梯度，将坡度分解为车辆行驶方向上的纵坡分量和垂直行驶方向上的横坡分量，分别刻画牵引/制动阻碍与横向稳定性风险，并通过非补偿函数合成为方向相关坡度阻碍度。该方法将通行能力表达由 $R(x,y)$ 扩展为 $R(x,y,\theta)$，为构建方向异质性越野通行代价场提供了基础。
+    </blockquote>
+  </section>
+
+  <section class="card">
+    <h2>最终执行顺序</h2>
+    <ol>
+      <li>准备一个山地 DEM 和对应 OSM 山路数据。</li>
+      <li>先写 <code>terrain_derivatives.py</code> 和 <code>directional_model.py</code>。</li>
+      <li>输出 8 方向代价图、最优方向图和 AI 图。</li>
+      <li>再写 OSM 样本构建与方向一致性验证。</li>
+      <li>完成 B0、B1、Ours 三个模型的对比表。</li>
+      <li>最后整理成组会 PPT 或论文方法小节。</li>
+    </ol>
+    <div class="ok"><strong>下一步代码实现建议：</strong>优先完成 DEM 读取、梯度计算、8方向纵坡/横坡计算和方向代价栅格输出。这是创新点1最小可运行闭环。</div>
+  </section>
+
+  <div class="footer">
+    <p>说明：本文件基于用户上传的研究报告与前面对话内容整理生成。它不是最终论文正文，而是后续算法设计、代码实现和实验验证的工作蓝图。</p>
+  </div>
+</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"7939e04a4baf43c8b86a560f74aac60e","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

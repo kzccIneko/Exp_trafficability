@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>雅江格西沟DEM数据覆盖范围</name>
+  <description>分析区域DEM数据覆盖范围和统计信息</description>
+
+  <!-- 样式定义 -->
+  <Style id="demBoundsStyle">
+    <LineStyle>
+      <color>ff00ff00</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>2000ff00</color>
+    </PolyStyle>
+  </Style>
+
+  <Style id="targetBoundsStyle">
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>4</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>20ff0000</color>
+    </PolyStyle>
+  </Style>
+
+  <Style id="iconStyle">
+    <IconStyle>
+      <color>ff00ffff</color>
+      <scale>1.2</scale>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_square.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+
+  <!-- DEM覆盖范围 -->
+  <Folder>
+    <name>DEM覆盖范围</name>
+    <open>1</open>
+
+    <!-- DEM边界 -->
+    <Placemark>
+      <name>DEM覆盖范围 (30m)</name>
+      <description><![CDATA[
+<h3>DEM数据信息</h3>
+<table border="1">
+<tr><td>文件名</td><td>dem_30m_clipped.tif</td></tr>
+<tr><td>分辨率</td><td>30m</td></tr>
+<tr><td>尺寸</td><td>1000 x 1000 像素</td></tr>
+<tr><td>高程范围</td><td>2,517m ~ 4,722m</td></tr>
+</table>
+
+<h3>边界坐标</h3>
+<ul>
+<li>左: 100.845972°</li>
+<li>右: 101.123750°</li>
+<li>下: 29.876250°</li>
+<li>上: 30.154028°</li>
+</ul>
+      ]]></description>
+      <styleUrl>#demBoundsStyle</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              100.845972,29.87625022222222,0
+              101.12374977777777,29.87625022222222,0
+              101.12374977777777,30.154028,0
+              100.845972,30.154028,0
+              100.845972,29.87625022222222,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- 12.5m DEM边界 -->
+    <Placemark>
+      <name>DEM覆盖范围 (12.5m重采样)</name>
+      <description><![CDATA[
+<h3>12.5m DEM信息</h3>
+<table border="1">
+<tr><td>文件名</td><td>dem_12m_resampled.tif</td></tr>
+<tr><td>分辨率</td><td>12.5m</td></tr>
+<tr><td>尺寸</td><td>2400 x 2400 像素</td></tr>
+</table>
+      ]]></description>
+      <styleUrl>#targetBoundsStyle</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              100.845972,29.87625022222222,0
+              101.12374977777777,29.87625022222222,0
+              101.12374977777777,30.154028,0
+              100.845972,30.154028,0
+              100.845972,29.87625022222222,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Folder>
+
+  <!-- 区域信息 -->
+  <Folder>
+    <name>区域标记</name>
+
+    <!-- 中心点 -->
+    <Placemark>
+      <name>分析区域中心</name>
+      <description><![CDATA[
+<h3>雅江格西沟</h3>
+<p>四川省甘孜州雅江县</p>
+<p>中心坐标: 100.984861°E, 30.015139°N</p>
+<p>平均高程: 3,630m</p>
+      ]]></description>
+      <styleUrl>#iconStyle</styleUrl>
+      <Point>
+        <coordinates>100.98486088888889,30.01513911111111,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- 四角标记 -->
+    <Placemark>
+      <name>西南角</name>
+      <Point>
+        <coordinates>100.845972,29.87625022222222,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>东南角</name>
+      <Point>
+        <coordinates>101.12374977777777,29.87625022222222,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>东北角</name>
+      <Point>
+        <coordinates>101.12374977777777,30.154028,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <Placemark>
+      <name>西北角</name>
+      <Point>
+        <coordinates>100.845972,30.154028,0</coordinates>
+      </Point>
+    </Placemark>
+  </Folder>
+
+</Document>
+</kml>

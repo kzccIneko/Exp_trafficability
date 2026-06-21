@@ -1,0 +1,18 @@
+
+ALOS World 3D 30m DEM 下载信息
+==============================
+
+分析区域: 100.846°E ~ 101.124°E, 29.876°N ~ 30.154°N
+需要瓦片: N029E100
+
+下载方式:
+1. 访问: https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30_e.htm
+2. 注册JAXA EORC账号
+3. 下载瓦片: N029E100
+
+替代数据源:
+- Copernicus DEM GLO-30: 已下载到 downloaded_data/copernicus_dem_30m.tif
+- SRTM: https://earthexplorer.usgs.gov/
+- NASA DEM: https://search.earthdata.nasa.gov/
+
+注: 真正的12.5m分辨率需要ALOS PALSAR数据，需要单独申请

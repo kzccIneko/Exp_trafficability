@@ -1,0 +1,9 @@
+
+# CDS API 配置文件
+# 保存为: ~/.cdsapirc
+
+url: https://cds.climate.copernicus.eu/api/v2
+key: YOUR_API_KEY_HERE
+
+# 获取API密钥请访问:
+# https://cds.climate.copernicus.eu/how-to-api
